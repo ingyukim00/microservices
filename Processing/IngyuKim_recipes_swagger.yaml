@@ -1,0 +1,57 @@
+# define stats
+openapi: 3.0.0
+info:
+  description: This API provides event statistics
+  version: "1.0.0"
+  title: Stats API
+  contact:
+    email: email
+paths:
+  /stats:
+    get:
+      summary: Gets the event statistics
+      operationId: app.get_stats
+      description: Retrieves processed statistics for event types.
+      responses:
+        '200':
+          description: Successfully returned the event statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  num_event1:
+                    type: integer
+                    description: Cumulative number of Event1 received
+                    example: 89
+                  num_event2:
+                    type: integer
+                    description: Cumulative number of Event2 received
+                    example: 50
+                  avg_event1_value:
+                    type: number
+                    format: float
+                    description: Average numeric value for Event1
+                    example: 70.5
+                  avg_event2_value:
+                    type: number
+                    format: float
+                    description: Average numeric value for Event1
+                    example: 4
+                  median_event1_value:
+                    type: number
+                    description: Maximum numeric value for Event2
+                    example: 71
+                  median_event2_value:
+                    type: number
+                    description: Maximum numeric value for Event2
+                    example: 4
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string

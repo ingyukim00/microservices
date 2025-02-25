@@ -1,0 +1,13 @@
+events:
+  hostname: ec2-18-232-133-253.compute-1.amazonaws.com
+  port: 9092
+  topic: events
+  thresholds:
+    views_high: 140
+    views_low: 10
+    rating_high: 4.5
+    rating_low: 2.0
+  datastore:
+    filename: /data/anomaly.json
+scheduler:
+  period_sec: 5

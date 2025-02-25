@@ -1,0 +1,160 @@
+version: '3.3'
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181"
+    hostname: zookeeper
+    volumes:
+      - /home/ubuntu/zookeeper/data:/opt/zookeeper-3.4.13/data
+
+  kafka:
+    image: wurstmeister/kafka
+    command: [start-kafka.sh]
+    ports:
+      - "9092:9092"
+    hostname: kafka
+    environment:
+      KAFKA_CREATE_TOPICS: "events:1:1" # topic:partition:replicas
+      KAFKA_ADVERTISED_HOST_NAME: ec2-18-232-133-253.compute-1.amazonaws.com # Replace with your VM's DNS Name
+      KAFKA_LISTENERS: INSIDE://:29092,OUTSIDE://:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:29092,OUTSIDE://ec2-18-232-133-253.compute-1.amazonaws.com:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LOG_DIRS: /kafka/kafka-logs
+    volumes:
+      - /home/ubuntu/kafka:/kafka/kafka-logs
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+    # Verify if the Kafka service is listening on the specified TCP port (9092)
+      test: ["CMD-SHELL", "kafka-topics.sh --bootstrap-server localhost:9092 --list | grep -q '^events$'"]
+      interval: 10s   # Kafka will attempt the healthcheck every 10 seconds.
+      timeout: 5s     # A timeout is set to 5 seconds for each attempt.
+      retries: 5      # After 5 failed attempts, Kafka is marked as unhealthy.
+    depends_on:
+      - "zookeeper"
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'events' # Change this if necessary
+      MYSQL_USER: 'acit3855'       # Customize this value
+      MYSQL_PASSWORD: 'Acit3855!' # Customize this value
+      MYSQL_ROOT_PASSWORD: 'root1234!' # Customize this value
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+
+  receiver:
+    # build:
+    #   context: ../Receiver
+    image: ingyukim00/receiver:receiverapp
+    ports:
+      - "8080:8080"
+    environment:
+      - TARGET_ENV=test
+    volumes:
+      - /home/ubuntu/config/receiver:/config
+      - /home/ubuntu/logs:/logs
+    # depends_on:
+    #   - kafka
+    depends_on:
+      kafka:
+        condition: service_healthy
+    entrypoint: ["/usr/local/bin/wait-for-it", "kafka:9092", "--timeout=60", "--strict", "--", "python3", "app.py"]
+
+  storage:
+    # build:
+    #   context: ../StorageProject
+    image: ingyukim00/storage:storagerapp
+    ports:
+      - "8090:8090"
+    environment:
+      - TARGET_ENV=test
+    volumes:
+      - /home/ubuntu/config/storage:/config
+      - /home/ubuntu/logs:/logs
+    depends_on:
+      kafka:
+        condition: service_healthy
+    entrypoint: ["/usr/local/bin/wait-for-it", "kafka:9092", "--timeout=60", "--strict", "--", "/usr/local/bin/wait-for-it", "db:3306", "--timeout=60", "--strict", "--", "python3", "app.py"]
+
+
+  processing:
+    # build:
+    #   context: ../Processing
+    image: ingyukim00/processing:processingapp
+    network_mode: "host"
+    ports:
+      - "8100:8100"
+    environment:
+      - TARGET_ENV=test
+    volumes:
+      - /home/ubuntu/config/processing:/config
+      - /home/ubuntu/logs:/logs
+      - processing-db:/data
+    depends_on:
+      - storage
+
+  analyzer:
+    build:
+      context: ../Analyzer
+    image: analyzer:latest
+    ports:
+      - "8110:8110"
+    environment:
+      - TARGET_ENV=test
+    volumes:
+      - /home/ubuntu/config/analyzer:/config
+      - /home/ubuntu/logs:/logs
+    depends_on:
+      kafka:
+        condition: service_healthy
+    entrypoint: ["/usr/local/bin/wait-for-it", "kafka:9092", "--timeout=60", "--strict", "--", "python3", "app.py"]
+
+  anomaly:
+    build:
+      context: ../Anomaly
+    image: anomaly:latest
+    ports:
+      - "8120:8120"
+    environment:
+      - TARGET_ENV=test
+    volumes:
+      - /home/ubuntu/config/anomaly:/config
+      - /home/ubuntu/logs:/logs
+      - anomaly-db:/data
+    depends_on:
+      kafka:
+        condition: service_healthy
+    entrypoint: ["/usr/local/bin/wait-for-it", "kafka:9092", "--timeout=60", "--strict", "--", "python3", "app.py"]
+      
+  dashboard:
+    build:
+      context: ../dashboard-ui/dashboard1
+    image: dashboard:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "processing"
+      - "analyzer"
+  
+  dashboard2:
+    build:
+      context: ../dashboard-ui/dashboard2
+    image: dashboard2:latest
+    ports:
+      - "8888:80"  # Map port 80 of the container to port 8888 on the host
+    depends_on:
+      - "processing"
+      - "analyzer"
+
+volumes:
+  my-db:
+  processing-db:
+  anomaly-db:

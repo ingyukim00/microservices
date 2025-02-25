@@ -1,0 +1,120 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: recipe API
+  description: This API allows the creation of recipes and the submission of recipe ratings.
+
+paths:
+  /recipe/create:
+    post:
+      tags:
+        - create_a_recipe
+      summary: creates a new recipe
+      operationId: app.create_recipe
+      description: Adds a new recipe to the system
+      responses:
+        '201':
+          description: Recipe created successfully.
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/create_recipe'
+        description: Recipe data to add.
+
+  /recipe/rate:
+    post:
+      tags:
+        - rate_a_recipe
+      summary: rate recipes
+      operationId: app.rate_recipe
+      description: Adds a rating to a recipe in the system.
+      responses:
+        '201':
+          description: Recipe rated successfully.
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rate_recipe'
+        description: Recipe rating to add.
+
+components:
+  schemas:
+    create_recipe:
+      required:
+        - user_id
+        - recipe_id
+        - title
+        - ingredients
+        - instructions
+        - views
+        - timestamp
+#        - trace_id
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        recipe_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0852
+        title:
+          type: string
+          example: Lasagna
+        ingredients:
+          type: string
+          example: "Pasta sheets, Ground beef, Spagetti sauce, Cheese, eggs, seasonings"
+        instructions:
+          type: string
+          example: "1. Cook and drain the ground beef, then stir in the spaghetti sauce and simmer. 2. Combine the cottage cheese, 2 cups of mozzarella, eggs, half of the Parmesan, and seasonings. 3. Assemble the lasagna according to the detailed recipe. 4. Bake, covered, for 45 minutes. 5. Uncover and continue baking for 10 minutes."
+        views:
+          type: number
+          format: integer
+          example: 0
+        timestamp:
+          type: string
+          format: date-time
+          example: '2024-01-15T07:35:22.075212Z'
+#        trace_id:
+#          type: string
+#          format: uuid
+#          example: 'b29f1bb0-c8e8-4d15-828a-12a3d93a1234'
+      type: object
+    rate_recipe:
+      required:
+        - user_id
+        - recipe_id
+        - rating
+        - timestamp
+#        - trace_id
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0853
+        recipe_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0852
+        rating:
+          type: number
+          format: float
+          description: The rating given to the recipe.
+          minimum: 1
+          maximum: 5
+          example: 4.0
+        timestamp:
+          type: string
+          format: date-time
+          example: '2024-01-15T07:36:10.026523Z'
+#        trace_id:
+#          type: string
+#          format: uuid
+#          example: 'b29f1bb0-c8e8-4d15-828a-12a3d93a1222'
+      type: object

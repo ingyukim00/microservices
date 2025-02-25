@@ -1,0 +1,177 @@
+openapi: 3.0.0
+info:
+  description: This API provides analyzer information
+  version: "1.0.0"
+  title: Analyzer API
+  contact:
+    email: email
+
+paths:
+  /created_recipes:
+    get:
+      summary: Get a create_recipe from history
+      operationId: app.get_created_recipes
+      description: Gets created_recipes from the event store
+      parameters:
+        - name: index
+          in: query
+          description: Gets the CR at the index in the eventstore
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Successfully retrieved Event1
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateRecipe'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /rated_recipes:
+    get:
+      summary: Get a rated_recipe from history
+      operationId: app.get_rated_recipes
+      description: Gets rated_recipes from the event store
+      parameters:
+        - name: index
+          in: query
+          description: Gets the RR at the index in the event store
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Successfully retrieved RatedRecipes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateRecipe'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /stats:
+    get:
+      summary: Get statistics of events in the queue
+      operationId: app.get_event_stats
+      description: Gets the stats of the history events
+      responses:
+        '200':
+          description: Successfully retrieved stats
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stats'
+
+components:
+  schemas:
+    CreateRecipe:
+      type: object
+      required:
+        - user_id
+        - recipe_id
+        - title
+        - ingredients
+        - instructions
+        - views
+        - timestamp
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        recipe_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0852
+        title:
+          type: string
+          example: Lasagna
+        ingredients:
+          type: string
+          example: "Pasta sheets, Ground beef, Spaghetti sauce, Cheese, eggs, seasonings"
+        instructions:
+          type: string
+          example: "1. Cook and drain the ground beef, then stir in the spaghetti sauce and simmer. 2. Combine the cottage cheese, 2 cups of mozzarella, eggs, half of the Parmesan, and seasonings. 3. Assemble the lasagna according to the detailed recipe. 4. Bake, covered, for 45 minutes. 5. Uncover and continue baking for 10 minutes."
+        views:
+          type: number
+          format: integer
+          example: 0
+        timestamp:
+          type: string
+          format: date-time
+          example: '2024-01-15T07:35:22.075212Z'
+
+    RateRecipe:
+      type: object
+      required:
+        - user_id
+        - recipe_id
+        - rating
+        - timestamp
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0853
+        recipe_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0852
+        rating:
+          type: number
+          format: float
+          description: The rating given to the recipe.
+          minimum: 1
+          maximum: 5
+          example: 4.0
+        timestamp:
+          type: string
+          format: date-time
+          example: '2024-01-15T07:36:10.026523Z'
+
+    Stats:
+      type: object
+      required:
+        - num_cr
+        - num_rr
+      properties:
+        num_cr:
+          type: integer
+          example: 100
+        num_rr:
+          type: integer
+          example: 100

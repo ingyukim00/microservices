@@ -1,0 +1,562 @@
+[
+    {
+        "event_id": "6d140007-5808-46d4-b98b-a7c2e2da75e5",
+        "trace_id": "2b19482f-848f-46fe-9460-1d50ab69e458",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.675516Z"
+    },
+    {
+        "event_id": "b7374027-b609-4f66-a7e3-a5cebeca0c11",
+        "trace_id": "cb4136ef-b793-4b53-a032-38ef76cec40a",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.675837Z"
+    },
+    {
+        "event_id": "abc6456b-e0c1-4c18-9916-6e32494a2bca",
+        "trace_id": "6010f919-aee4-43d5-a966-2a94d9f6d9da",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.676654Z"
+    },
+    {
+        "event_id": "d1df814a-d478-4625-8b9e-e27612ddccde",
+        "trace_id": "1a364d7c-dd1d-44bd-acc4-d1fb0580a018",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 1 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.676982Z"
+    },
+    {
+        "event_id": "a155a1bb-361f-4bad-8a96-4d658d2871c5",
+        "trace_id": "9b0c8125-1720-4d09-b7ec-13f00fbe9162",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.677189Z"
+    },
+    {
+        "event_id": "1c01125b-03b2-4fa4-929e-18b5592b728b",
+        "trace_id": "93ee6a99-247e-4400-9f0b-df035d7efb29",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 3 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.678419Z"
+    },
+    {
+        "event_id": "b32f3d55-1427-4e71-8d39-6f0dac926275",
+        "trace_id": "76db5c6a-7618-4d4a-9216-9117eca521c1",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.678604Z"
+    },
+    {
+        "event_id": "0d0e39fd-b513-46e6-92d2-35d10d682a3b",
+        "trace_id": "506d10f6-2c42-46c6-b102-3b40352a8c5a",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.679026Z"
+    },
+    {
+        "event_id": "8f94a044-526f-4ddb-a89a-1d31015c05f4",
+        "trace_id": "3dba15be-6b3e-4dcd-8406-c3f30de6d9db",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 5 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.679232Z"
+    },
+    {
+        "event_id": "136c1059-5038-4e75-a888-f992d043c22d",
+        "trace_id": "1133ff6f-83e7-4575-a941-a15963a495c4",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.679423Z"
+    },
+    {
+        "event_id": "5d942c28-7630-4dd1-a956-0642d1b8d782",
+        "trace_id": "2ab95cc0-44aa-4822-b875-cdbce3b67c50",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.680097Z"
+    },
+    {
+        "event_id": "aea4f3a8-f74b-4802-a4cc-8022b73683aa",
+        "trace_id": "63d8a09c-d374-4d64-adbe-ac35c4ed8680",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 8 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.681202Z"
+    },
+    {
+        "event_id": "a3ff5bb2-8263-4e77-9954-9df349c5e96f",
+        "trace_id": "06a70693-0883-40b7-be74-fcefe2e56773",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.681392Z"
+    },
+    {
+        "event_id": "eb922409-4238-43db-921f-2ee2a7c2d947",
+        "trace_id": "62307c3b-a60d-4d52-bb73-39b3d86ab339",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.681578Z"
+    },
+    {
+        "event_id": "7c80a850-b746-415b-b26d-13553d2f13dc",
+        "trace_id": "f4ac83a4-598e-4604-abb0-51e8b945c167",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.681766Z"
+    },
+    {
+        "event_id": "ff8fe8c8-50c4-475b-800a-a390b592e5db",
+        "trace_id": "6a1ee7af-abb1-4690-b537-2a571a8418d4",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.682449Z"
+    },
+    {
+        "event_id": "1eda7bba-031f-41ba-846c-e671e0dbcd6b",
+        "trace_id": "91014f0a-1d18-4e92-a765-eda064d4a810",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.683293Z"
+    },
+    {
+        "event_id": "989c2a9c-592e-44a0-be86-013ba2882cd2",
+        "trace_id": "8e68a3c0-25ee-4146-bcb5-2686d5c847c0",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too High",
+        "description": "Views of 142 exceed the threshold of 140.",
+        "timestamp": "2024-12-03T17:26:25.684300Z"
+    },
+    {
+        "event_id": "7dfd7f4a-7e91-4929-ab3a-0b0ed1a11aff",
+        "trace_id": "41051db0-f437-48a0-8123-bac0ef0ea100",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 5 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.684500Z"
+    },
+    {
+        "event_id": "4bf020a9-ee0b-45d8-8dac-f53a01840c7f",
+        "trace_id": "a8c69009-4e55-43de-a0d9-68f670260fe0",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.685039Z"
+    },
+    {
+        "event_id": "9017d656-80db-4732-bbee-3b6b96dcbc48",
+        "trace_id": "1fb39669-bc79-4274-806a-4082d52f89ee",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.686757Z"
+    },
+    {
+        "event_id": "223b0f3c-0a79-4233-9ced-4b46fa9b9be0",
+        "trace_id": "8a88804a-631e-4240-a303-8cb9c6701fa4",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 1 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.686992Z"
+    },
+    {
+        "event_id": "c88712fb-f8da-4168-8d18-e9a0c7a7f763",
+        "trace_id": "c2e9beac-eca6-4cf5-ade8-69baf14140dd",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.687635Z"
+    },
+    {
+        "event_id": "6616f1ed-40b0-4be6-91e3-7ab41799144b",
+        "trace_id": "e94057a9-b978-4c75-a309-c725bb27d76c",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.687961Z"
+    },
+    {
+        "event_id": "d30f4a9a-961c-45a2-bc17-e5bc616c7d75",
+        "trace_id": "61c4f70c-2576-4dbf-a3a8-189038cbb3d5",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.688819Z"
+    },
+    {
+        "event_id": "f1e67619-a3e9-4ecf-a2d1-81b0f0c4e85e",
+        "trace_id": "70707c8e-644c-4c3b-a3cc-ad20da374716",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.689158Z"
+    },
+    {
+        "event_id": "ac8aa20c-2c19-4a5e-965f-a98d797b60a9",
+        "trace_id": "b6a92174-2a4c-4a87-a823-5527c0a57a72",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.689672Z"
+    },
+    {
+        "event_id": "64cdcb3d-4f47-4543-adc2-313e6b4b7d20",
+        "trace_id": "b98c6c4d-6449-4bb7-841e-262997220049",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.689864Z"
+    },
+    {
+        "event_id": "f5dc40d4-d7ff-4133-a17e-0e7565a6a464",
+        "trace_id": "86589e6c-d5d6-4b8a-8edd-4f15abab15b0",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.691012Z"
+    },
+    {
+        "event_id": "36b33d25-6091-44b2-b77a-d85e5f1231fc",
+        "trace_id": "afe7fcca-8ed0-4c09-993e-a08017dbd0f8",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.691209Z"
+    },
+    {
+        "event_id": "1ba4ee0d-9a7f-4424-a68c-09af99ad25c7",
+        "trace_id": "ffcc6cf3-641a-4651-857e-bfbf3092e2bc",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.691740Z"
+    },
+    {
+        "event_id": "4ff1a640-33b7-43cf-be67-b9663da2fc44",
+        "trace_id": "40135000-d561-442e-b5d7-735e24e0be80",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too High",
+        "description": "Views of 145 exceed the threshold of 140.",
+        "timestamp": "2024-12-03T17:26:25.692186Z"
+    },
+    {
+        "event_id": "024ad5b0-3e15-495c-9ff3-f5139f77227a",
+        "trace_id": "22e132f8-71a1-4a34-8546-b380b8b7ef1e",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too High",
+        "description": "Views of 144 exceed the threshold of 140.",
+        "timestamp": "2024-12-03T17:26:25.693041Z"
+    },
+    {
+        "event_id": "6fabaf3d-0df5-47ba-ad11-5c43f30da41c",
+        "trace_id": "4b928b4a-bdc5-4fcb-86e8-ccd6995637f7",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.693470Z"
+    },
+    {
+        "event_id": "c5bbde10-8efb-4f1f-aaea-dd1ff8814deb",
+        "trace_id": "803a4ebd-9374-4c8b-aad8-feac3516abfa",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.694471Z"
+    },
+    {
+        "event_id": "fc2cc86f-0b13-4951-bc09-00f75a42e2c0",
+        "trace_id": "3928911c-5e66-4f94-8741-bd7216e56a10",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 7 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.694766Z"
+    },
+    {
+        "event_id": "66733a2f-1687-48d3-81a4-68155f801d8b",
+        "trace_id": "46ede4ba-5cc5-4de2-a87a-d8d41533d497",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.694974Z"
+    },
+    {
+        "event_id": "818f6f54-f02b-41db-b5a2-a3df3f054b2d",
+        "trace_id": "afc465f0-bfcb-45cb-a6f9-3962edb742d3",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.696285Z"
+    },
+    {
+        "event_id": "17b7ed2a-85fe-437d-8ca9-10693eaeeff1",
+        "trace_id": "097cf27b-a141-4a63-941a-da55aea65d35",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.696797Z"
+    },
+    {
+        "event_id": "0d8f9f1a-8f84-4c4e-b8eb-a8c441a81bff",
+        "trace_id": "563d4777-dd2f-4680-b776-673d70f8910a",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.697124Z"
+    },
+    {
+        "event_id": "48aa5839-cdea-4188-91c3-6d80c3a8b6d0",
+        "trace_id": "369f9e99-dbd5-426c-b795-01bc43b06359",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.697321Z"
+    },
+    {
+        "event_id": "201a2e4a-7d32-417a-afbf-17db5b892ac3",
+        "trace_id": "2563df75-1cee-4715-8362-c39609c4283f",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.697619Z"
+    },
+    {
+        "event_id": "be0bf92d-3f17-441a-80d5-94b995b175d1",
+        "trace_id": "1bb6160c-914e-46f5-a688-986d3a5493d9",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.698439Z"
+    },
+    {
+        "event_id": "22410bbd-d1c3-48d7-9618-28a434e8fac9",
+        "trace_id": "5247925a-fdc7-4671-9377-026b5b22ebc5",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.699582Z"
+    },
+    {
+        "event_id": "a0b2b4d7-40db-48d9-8af2-7a8244f6d2b5",
+        "trace_id": "0481e98e-0759-448b-9bd0-b7bad030c39f",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.699779Z"
+    },
+    {
+        "event_id": "4128c441-3ca6-485d-971d-905243d03d90",
+        "trace_id": "55adfa96-3774-477b-ace9-842daf77948e",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.700100Z"
+    },
+    {
+        "event_id": "94cf7d86-258e-4b98-b4eb-5cc9a17612da",
+        "trace_id": "a8679ded-5920-4ac4-bc31-fe6f7e7df11c",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Views of 3 are below the threshold of 10.",
+        "timestamp": "2024-12-03T17:26:25.700531Z"
+    },
+    {
+        "event_id": "6e181d81-121c-464d-a648-383719d8d023",
+        "trace_id": "442aad05-d166-422b-93db-516dbe392822",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.701294Z"
+    },
+    {
+        "event_id": "4b33426f-052f-4a3f-a084-0dabf01d0777",
+        "trace_id": "316e0c31-0f04-4e21-be78-bf6e2b109527",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.701594Z"
+    },
+    {
+        "event_id": "693ff166-1943-4dba-8ed3-474822f34187",
+        "trace_id": "9fb951bd-83e7-45a7-98c9-a0feae291b8f",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.702255Z"
+    },
+    {
+        "event_id": "dfe5bf2b-4797-4a4a-ab79-8037a05629ab",
+        "trace_id": "a6743363-649c-498e-9608-0534fa91a244",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.702453Z"
+    },
+    {
+        "event_id": "c10a6df3-76f6-4a2e-a4dc-df259a268b18",
+        "trace_id": "6edaf9b0-746c-4195-9bf9-f87d4abbcf07",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.702874Z"
+    },
+    {
+        "event_id": "1568e94c-f629-4d88-904a-435632046cb9",
+        "trace_id": "75e8d770-c488-4a11-9488-8f5c5217c1ce",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too High",
+        "description": "Views of 150 exceed the threshold of 140.",
+        "timestamp": "2024-12-03T17:26:25.703201Z"
+    },
+    {
+        "event_id": "50e897f0-46e0-43bb-b42e-b5a664c73a8d",
+        "trace_id": "7d1f01da-77d1-4823-a0d5-22f21300d0bd",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.703729Z"
+    },
+    {
+        "event_id": "aa17fc1c-bc43-47b3-afa1-f610d94cdf5a",
+        "trace_id": "ae9459e9-db20-455f-9116-e36b2e091754",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.703943Z"
+    },
+    {
+        "event_id": "68f9330e-b89e-48eb-921d-7750ce4ec68a",
+        "trace_id": "47ab560e-35ba-480f-9ebd-117a5f1ce96b",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.704471Z"
+    },
+    {
+        "event_id": "2a272095-d0b8-439f-ada1-80e72f1530e7",
+        "trace_id": "5d11d36f-3dbe-443f-9d82-4800b1be9c0f",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.705350Z"
+    },
+    {
+        "event_id": "20bcfbc2-ebef-44e9-8bed-6ae6be0f4423",
+        "trace_id": "33a98bee-f7b0-4ec6-aa2c-fe6aa69f4f6a",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.705547Z"
+    },
+    {
+        "event_id": "d90db5e6-31e2-431f-9915-d06dbd4b2e22",
+        "trace_id": "ac1df6b2-9a35-4dc3-a5e4-760bc8f524cf",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.705750Z"
+    },
+    {
+        "event_id": "46e98569-e903-4a11-891e-9af0205ea8d8",
+        "trace_id": "13f6d5d0-04d4-499c-9895-5a6b5076743b",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too High",
+        "description": "Views of 145 exceed the threshold of 140.",
+        "timestamp": "2024-12-03T17:26:25.706433Z"
+    },
+    {
+        "event_id": "cad534a5-bbee-46d1-9772-ce5a7573968a",
+        "trace_id": "b0fe4190-1162-4806-a477-2a56dcdf7b9e",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.706743Z"
+    },
+    {
+        "event_id": "bfba026f-f3be-4939-8ae5-d328e7ea38dc",
+        "trace_id": "915bce3b-7fe6-4db0-b42b-2d1dd4f5c97d",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.707282Z"
+    },
+    {
+        "event_id": "03a46795-9122-4f84-8748-c68f1f388b6c",
+        "trace_id": "9bccc57b-2c7f-4596-b32e-03cafc6a4e85",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.708269Z"
+    },
+    {
+        "event_id": "0b9118a0-14b7-4cdb-803e-f7830c4e6f00",
+        "trace_id": "a71b2a43-6b7c-441d-9996-ac8a8b4ac9ef",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:26:25.708466Z"
+    },
+    {
+        "event_id": "8a01d796-cc29-4a31-8bd9-8a68e7a81e44",
+        "trace_id": "e88b22f2-79e0-4508-b3bf-3a2a3127c246",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.709252Z"
+    },
+    {
+        "event_id": "6f2c8ca3-bed7-4abc-aefa-b8f74dfa6bfe",
+        "trace_id": "5aa302e8-a382-4913-8d87-06985d0fe76d",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:26:25.709765Z"
+    },
+    {
+        "event_id": "a6c2223d-c2d8-4f25-aae5-a08bfc2ccb73",
+        "trace_id": "2ab6fc47-ffd4-4d9b-83f7-c2b11762ba25",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:29:35.711357Z"
+    },
+    {
+        "event_id": "3fb69daf-b2a3-4e5c-9924-9d5894a27217",
+        "trace_id": "d876e204-11f1-476b-8768-2d5d40df30c1",
+        "event_type": "create_recipe",
+        "anomaly_type": "Too High",
+        "description": "Views of 141 exceed the threshold of 140.",
+        "timestamp": "2024-12-03T17:29:35.712324Z"
+    },
+    {
+        "event_id": "d290f1ee-6c54-4b01-90e6-d701111111",
+        "trace_id": "05cf7c8c-a24d-483d-bc70-bce59fa58042",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too Low",
+        "description": "Rating of 1 is below the threshold of 2.0.",
+        "timestamp": "2024-12-03T17:48:40.247331Z"
+    },
+    {
+        "event_id": "d290f1ee-6c54-4b01-90e6-d702222222",
+        "trace_id": "a6a79fd5-cc3e-4861-aa1c-b1615d4c967f",
+        "event_type": "rate_recipe",
+        "anomaly_type": "Too High",
+        "description": "Rating of 5 exceeds the threshold of 4.5.",
+        "timestamp": "2024-12-03T17:49:34.612157Z"
+    }
+]

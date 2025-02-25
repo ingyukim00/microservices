@@ -1,0 +1,48 @@
+{
+    "the_num_of_recipes": 51,
+    "recent_recipes": [
+        {
+            "msg_data": "Recipe d290f1ee-6c54-4b01-90e6-d701748f0852 is created by user d290f1ee-6c54-4b01-90e6-d701748f0851.",
+            "received_timestamp": "2024-10-29 10:32:44.447970"
+        },
+        {
+            "msg_data": "Recipe a39b8765-31a7-44a4-8095-f6d1f36658e0 is created by user 8cdf8761-e215-490f-8850-6289d372583c.",
+            "received_timestamp": "2024-10-29 10:25:50.085442"
+        },
+        {
+            "msg_data": "Recipe df422e14-1bf3-46a4-a235-b20a2b086191 is created by user b97d9c1b-4fcd-403f-a6e8-d74e53f5c8ee.",
+            "received_timestamp": "2024-10-29 10:25:49.880036"
+        },
+        {
+            "msg_data": "Recipe 06e3dc96-edd8-4d4f-bf61-56514a284e91 is created by user 2672da69-da32-4ee3-81c6-412075d28c7b.",
+            "received_timestamp": "2024-10-29 10:25:45.696424"
+        },
+        {
+            "msg_data": "Recipe 869fd78e-a10a-4d93-ba23-7b12bc62e9d5 is created by user 8e40bc08-edab-4aaa-afb2-f6583d5f9530.",
+            "received_timestamp": "2024-10-29 10:25:45.368697"
+        }
+    ],
+    "the_num_of_ratings": 28,
+    "recent_ratings": [
+        {
+            "msg_data": "Recipe 43c8aefe-bd01-423d-ba95-1d444acd7ae2 is rated 5 by user c3612a3c-b334-4afe-9bb3-f5179865c114.",
+            "received_timestamp": "2024-10-29 10:25:50.167302"
+        },
+        {
+            "msg_data": "Recipe 032a21c9-4b1c-40e5-bf8a-048634cd37a8 is rated 1 by user 03d6d04c-2d70-4b1a-b19d-eca635908a82.",
+            "received_timestamp": "2024-10-29 10:25:49.961370"
+        },
+        {
+            "msg_data": "Recipe 6d305be7-67ab-43c5-bfca-d10c12addcbe is rated 5 by user 458dca78-8a79-4460-93b7-185ed758afe1.",
+            "received_timestamp": "2024-10-29 10:25:49.798852"
+        },
+        {
+            "msg_data": "Recipe c65e91ab-4ccf-45a8-9842-804e7f7704f4 is rated 5 by user 379ab1e2-f6a0-459a-99fe-54c82c8a2204.",
+            "received_timestamp": "2024-10-29 10:25:45.794292"
+        },
+        {
+            "msg_data": "Recipe a0e7babc-d837-4a56-a959-4417d544ecc7 is rated 2 by user a17c2fab-9b46-4b1f-a3de-03086a29547d.",
+            "received_timestamp": "2024-10-29 10:25:45.527729"
+        }
+    ]
+}

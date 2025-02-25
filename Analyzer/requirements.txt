@@ -1,0 +1,5 @@
+flask==3.0.3
+connexion[flask, uvicorn, swagger-ui]==3.1.0
+requests>=2.27
+pykafka==2.8.0
+starlette>=0.14.2
